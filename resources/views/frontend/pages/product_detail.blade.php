@@ -66,7 +66,7 @@
 											<!-- Description -->
 											<div class="short">
 												<h4>{{$product_detail->title}}</h4>
-												<div class="rating-main">
+												<!-- <div class="rating-main">
 													<ul class="rating">
 														@php
 															$rate=ceil($product_detail->getReview->avg('rate'))
@@ -80,7 +80,7 @@
 															@endfor
 													</ul>
 													<a href="#" class="total-review">({{$product_detail['getReview']->count()}}) Review</a>
-                                                </div>
+                                                </div> -->
                                                 @php 
                                                     $after_discount=($product_detail->price-(($product_detail->price*$product_detail->discount)/100));
                                                 @endphp
@@ -161,7 +161,7 @@
 												<!-- Tab Nav -->
 												<ul class="nav nav-tabs" id="myTab" role="tablist">
 													<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a></li>
-													<!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews</a></li> -->
+													<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews</a></li>
 												</ul>
 												<!--/ End Tab Nav -->
 											</div>
