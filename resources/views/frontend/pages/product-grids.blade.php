@@ -29,7 +29,7 @@
                     <div class="col-lg-3 col-md-4 col-12">
                         <div class="shop-sidebar">
                                 <!-- Single Widget -->
-                                <div class="single-widget category">
+                                <!-- <div class="single-widget category">
                                     <h3 class="title">Categories</h3>
                                     <ul class="categor-list">
 										@php
@@ -59,10 +59,10 @@
 											@endif
                                         @endforeach --}}
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!--/ End Single Widget -->
                                 <!-- Shop By Price -->
-                                    <div class="single-widget range">
+                                    <!-- <div class="single-widget range">
                                         <h3 class="title">Shop by Price</h3>
                                         <div class="price-filter">
                                             <div class="price-filter-inner">
@@ -80,7 +80,7 @@
                                                 </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                     <!--/ End Shop By Price -->
@@ -102,7 +102,7 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted">${{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>
+                                                 <p class="price"><!--<del class="text-muted">Rp. {{number_format($product->price)}}</del>-->  Rp. {{number_format($product->price)}}  </p> 
 
                                             </div>
                                         </div>
@@ -111,7 +111,7 @@
                                 </div>
                                 <!--/ End Single Widget -->
                                 <!-- Single Widget -->
-                                <div class="single-widget category">
+                                <!-- <div class="single-widget category">
                                     <h3 class="title">Brands</h3>
                                     <ul class="categor-list">
                                         @php
@@ -121,7 +121,7 @@
                                             <li><a href="{{route('product-brand',$brand->slug)}}">{{$brand->title}}</a></li>
                                         @endforeach
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!--/ End Single Widget -->
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <!-- Shop Top -->
-                                <div class="shop-top">
+                                <!-- <div class="shop-top">
                                     <div class="shop-shorter">
                                         <div class="single-shorter">
                                             <label>Show :</label>
@@ -156,7 +156,7 @@
                                         <li class="active"><a href="javascript:void(0)"><i class="fa fa-th-large"></i></a></li>
                                         <li><a href="{{route('product-lists')}}"><i class="fa fa-th-list"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!--/ End Shop Top -->
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                                     <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                     @if($product->discount)
-                                                                <span class="price-dec">{{$product->discount}} % Off</span>
+                                                                <!-- <span class="price-dec">{{$product->discount}} % Off</span> -->
                                                     @endif
                                                 </a>
                                                 <div class="button-head">
@@ -192,8 +192,9 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                                <!-- <span>Rp. {{number_format($after_discount,2)}}</span>
+                                                <del style="padding-left:4%;">Rp. {{number_format($product->price,2)}}</del> -->
+                                                <span>Rp. {{number_format($product->price)}}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -285,7 +286,7 @@
                                             @php
                                                 $after_discount=($product->price-($product->price*$product->discount)/100);
                                             @endphp
-                                            <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                            <h3><small><del class="text-muted">Rp. {{number_format($product->price)}}</del></small>    ${{number_format($after_discount)}}  </h3>
                                             <div class="quickview-peragraph">
                                                 <p>{!! html_entity_decode($product->summary) !!}</p>
                                             </div>

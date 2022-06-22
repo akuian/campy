@@ -1,4 +1,5 @@
-## Advance E-commerce website in  Laravel 7
+Campy Renty Website
+<!-- ## Advance E-commerce website in  Laravel 7
 
 
 #### Setup video : https://www.youtube.com/watch?v=URX5D1A5XQ4&t=19s
@@ -106,4 +107,4 @@ Many more....
 ![screencapture-e-shop-loc-product-track-2020-08-14-18_51_07](https://user-images.githubusercontent.com/29488275/90719682-bbcdeb00-e2d4-11ea-8e4e-7d6bfab1c421.png)
 
 
-
+ -->

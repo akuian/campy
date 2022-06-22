@@ -116,7 +116,7 @@
                                                 @endphp
                                                 <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                                 <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                @if($product->stock<=0)
+                                                <!-- @if($product->stock<=0)
                                                     <span class="out-of-stock">Sale out</span>
                                                 @elseif($product->condition=='new')
                                                     <span class="new">New</span
@@ -124,7 +124,7 @@
                                                     <span class="hot">Hot</span>
                                                 @else
                                                     <span class="price-dec">{{$product->discount}}% Off</span>
-                                                @endif
+                                                @endif -->
 
 
                                             </a>
@@ -144,8 +144,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
+                                                <span>Rp. {{number_format($product->price,2)}}</span>
+                                                <!-- <del style="padding-left:4%;">Rp. {{number_format($product->price,2)}}</del> -->
                                             </div>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@
                             <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
                             <div class="content">
                                 <p>{{$data->cat_info['title']}}</p>
-                                <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+
                                 <a href="{{route('product-detail',$data->slug)}}">Rent Now</a>
                             </div>
                         </div>
@@ -235,11 +235,11 @@
                             <div class="product-content">
                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                 <div class="product-price">
-                                    <span class="old">${{number_format($product->price,2)}}</span>
-                                    @php
+                                    <span class="old">Rp. {{number_format($product->price,2)}}</span>
+                                    <!-- @php
                                     $after_discount=($product->price-($product->price*$product->discount)/100)
-                                    @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
+                                    @endphp -->
+                                    <span>Rp. {{number_format($product->price,2)}}</span>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
                                     <div class="content">
                                         <h4 class="title"><a href="#">{{$product->title}}</a></h4>
-                                        <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                        <p class="price with-discount">Rp. {{number_format($product->price,2)}}</p>
                                     </div>
                                 </div>
                                 </div>
